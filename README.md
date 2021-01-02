@@ -1,2 +1,87 @@
-# azlinuxdesktopvm
-Linux desktop VM on Azure Tutorial
+# How to setup a Linux VM on Azure with desktop tutorial
+This page explains how to setup a Linux VM on Azure with a desktop UI.
+
+Linux distro: Ubuntu
+Version: From 18.04 LTS to 20 LTS
+Desktop UI: Linux Mate
+
+> I prefer installing Linux MATE instead of GNOME 3 for performance reason in particular with remote display (less animations and chrome).
+
+# Step#0 - Provision a Linux Ubuntu VM on Azure 
+[Quickstart: Create a Linux virtual machine in the Azure portal](https://docs.microsoft.com/fr-fr/azure/virtual-machines/linux/quick-create-portal)
+
+# Step#1 - version 
+
+check the current version 
+
+```bash
+lsb_release -a
+```
+
+# Step #2 Upgrade all installed packages
+Type the following apt command to upgrade the installed packages:
+
+```bash
+sudo apt update
+sudo apt list --upgradable
+sudo apt upgrade
+
+
+sudo reboot
+```
+
+# Step 3 : Remove all unused old kernels
+Run the following to remove them:
+
+```bash
+sudo apt --purge autoremove
+```
+
+Make sure you install update-manager-core package
+We need to install the Update Manager on server as it may or man not installed on your box:
+
+```bash
+sudo apt install update-manager-core
+```
+
+Step 4. Upgrade Ubuntu Linux to latest LTS
+Execute the following command:
+
+```bash
+sudo do-release-upgrade
+```
+
+> Please note if you may be greeted with the following message:
+> Checking for a new Ubuntu release
+> There is no development version of an LTS available.
+> To upgrade to the latest non-LTS develoment release 
+> set Prompt=normal in /etc/update-manager/release-upgrades.
+> In that case, pass the -d option to get the latest supported release forcefully:
+
+```bash
+sudo do-release-upgrade -d
+```
+
+
+#Step 5. Verification
+Check the Linux version:
+
+```bash
+lsb_release -a
+```
+
+# Intall Mate Desktop
+See How to Install MATE Desktop in Ubuntu Linux (itsfoss.com))
+> Choose LightDM instead of GDM3
+
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install ubuntu-mate-desktop
+```
+
+# Install RDP
+
+```bash
+sudo apt-get -q=2 -y install xrdp
+sudo service xrdp restart
+```
