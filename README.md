@@ -1,5 +1,5 @@
 # Walkthrough to setup a Linux Desktop VM on Azure
-This page explains how to setup a Linux VM on Azure with a desktop UI.
+This page explains how to setup a Mate desktop on Azure Linux VM.
 
   * Linux distro: Ubuntu
   * Version: From 18.04 LTS to 20 LTS
