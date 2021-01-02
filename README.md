@@ -18,7 +18,7 @@ check the current version
 lsb_release -a
 ```
 
-# Step #2 Upgrade all installed packages
+# Step #2 - Upgrade all installed packages
 Type the following apt command to upgrade the installed packages:
 
 ```bash
@@ -30,7 +30,7 @@ sudo apt upgrade
 sudo reboot
 ```
 
-# Step 3 : Remove all unused old kernels
+# Step #3 - Remove all unused old kernels
 Run the following to remove them:
 
 ```bash
@@ -44,7 +44,7 @@ We need to install the Update Manager on server as it may or man not installed o
 sudo apt install update-manager-core
 ```
 
-Step 4. Upgrade Ubuntu Linux to latest LTS
+Step #4 - Upgrade Ubuntu Linux to latest LTS
 Execute the following command:
 
 ```bash
@@ -63,14 +63,14 @@ sudo do-release-upgrade -d
 ```
 
 
-#Step 5. Verification
+#Step 5 - Verification
 Check the Linux version:
 
 ```bash
 lsb_release -a
 ```
 
-# Intall Mate Desktop
+# Step #5 - Intall Mate Desktop
 See How to Install MATE Desktop in Ubuntu Linux (itsfoss.com))
 > Choose LightDM instead of GDM3
 
@@ -79,7 +79,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install ubuntu-mate-desktop
 ```
 
-# Install RDP
+# Step #6 - Install RDP
 
 ```bash
 sudo apt-get -q=2 -y install xrdp
