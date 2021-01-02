@@ -44,7 +44,7 @@ After updating Ubuntu server, run the commands below to install update-manager-c
 sudo apt install update-manager-core
 ```
 
-Step #4 - Upgrade to latest LTS
+# Step #4 - Upgrade to latest LTS
 Execute the following command:
 
 ```bash
@@ -63,14 +63,14 @@ sudo do-release-upgrade -d
 ```
 
 
-#Step 5 - Verification
+# Step 5 - Verification
 Check the Linux version:
 
 ```bash
 lsb_release -a
 ```
 
-# Step #5 - Intall Mate Desktop
+# Step #6 - Intall Mate Desktop
 See [How to Install MATE Desktop in Ubuntu Linux](https://itsfoss.com/install-mate-desktop-ubuntu/)
 > Choose LightDM instead of GDM3
 
@@ -79,7 +79,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install ubuntu-mate-desktop
 ```
 
-# Step #6 - Install RDP
+# Step #7 - Install RDP
 
 ```bash
 sudo apt-get -q=2 -y install xrdp
