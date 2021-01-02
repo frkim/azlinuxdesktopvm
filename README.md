@@ -1,4 +1,4 @@
-# How to setup a Linux VM on Azure with desktop tutorial
+# Walkthrough to setup a Linux Desktop VM on Azure
 This page explains how to setup a Linux VM on Azure with a desktop UI.
 
 Linux distro: Ubuntu
@@ -10,9 +10,9 @@ Desktop UI: Linux Mate
 # Step#0 - Provision a Linux Ubuntu VM on Azure 
 [Quickstart: Create a Linux virtual machine in the Azure portal](https://docs.microsoft.com/fr-fr/azure/virtual-machines/linux/quick-create-portal)
 
-# Step#1 - version 
+# Step#1 - Version
 
-check the current version 
+check the current version of Linux
 
 ```bash
 lsb_release -a
@@ -31,20 +31,20 @@ sudo reboot
 ```
 
 # Step #3 - Remove all unused old kernels
-Run the following to remove them:
+Run the following to remove the unused old kernels:
 
 ```bash
 sudo apt --purge autoremove
 ```
 
 Make sure you install update-manager-core package
-We need to install the Update Manager on server as it may or man not installed on your box:
+After updating Ubuntu server, run the commands below to install update-manager-core if it is not already installed.
 
 ```bash
 sudo apt install update-manager-core
 ```
 
-Step #4 - Upgrade Ubuntu Linux to latest LTS
+Step #4 - Upgrade to latest LTS
 Execute the following command:
 
 ```bash
@@ -71,7 +71,7 @@ lsb_release -a
 ```
 
 # Step #5 - Intall Mate Desktop
-See How to Install MATE Desktop in Ubuntu Linux (itsfoss.com))
+See [How to Install MATE Desktop in Ubuntu Linux](https://itsfoss.com/install-mate-desktop-ubuntu/)
 > Choose LightDM instead of GDM3
 
 ```bash
