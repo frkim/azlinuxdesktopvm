@@ -7,10 +7,10 @@ This page explains how to setup a Linux VM on Azure with a desktop UI.
 
 > I prefer installing Linux MATE instead of GNOME 3 for performance reason in particular with remote display (less animations and chrome).
 
-# Step #0 - Provision a Linux Ubuntu VM on Azure 
+## Step #0 - Provision a Linux Ubuntu VM on Azure 
 [Quickstart: Create a Linux virtual machine in the Azure portal](https://docs.microsoft.com/fr-fr/azure/virtual-machines/linux/quick-create-portal)
 
-# Step #1 - Version
+## Step #1 - Version
 
 check the current version of Linux
 
@@ -18,7 +18,7 @@ check the current version of Linux
 lsb_release -a
 ```
 
-# Step #2 - Upgrade all installed packages
+## Step #2 - Upgrade all installed packages
 Type the following apt command to upgrade the installed packages:
 
 ```bash
@@ -30,7 +30,7 @@ sudo apt upgrade
 sudo reboot
 ```
 
-# Step #3 - Remove all unused old kernels
+## Step #3 - Remove all unused old kernels
 Run the following to remove the unused old kernels:
 
 ```bash
@@ -44,7 +44,7 @@ After updating Ubuntu server, run the commands below to install update-manager-c
 sudo apt install update-manager-core
 ```
 
-# Step #4 - Upgrade to latest LTS
+## Step #4 - Upgrade to latest LTS
 Execute the following command:
 
 ```bash
@@ -63,14 +63,14 @@ sudo do-release-upgrade -d
 ```
 
 
-# Step 5 - Verification
+## Step 5 - Verification
 Check the Linux version:
 
 ```bash
 lsb_release -a
 ```
 
-# Step #6 - Intall Mate Desktop
+## Step #6 - Intall Mate Desktop
 See [How to Install MATE Desktop in Ubuntu Linux](https://itsfoss.com/install-mate-desktop-ubuntu/)
 > Choose LightDM instead of GDM3
 
@@ -79,7 +79,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install ubuntu-mate-desktop
 ```
 
-# Step #7 - Install RDP
+## Step #7 - Install RDP
 
 ```bash
 sudo apt-get -q=2 -y install xrdp
