@@ -112,14 +112,20 @@ sudo usermod -aG docker ${USER}   #run docker as SUDO without typing sudo all th
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
 
-### kubectl Setup
+### VS Code
 ```
-az aks install-cli
+sudo snap install --classic code # or code-insiders
 ```
+More information here: [Visual Studio Code on Linux - Installation](https://code.visualstudio.com/docs/setup/linux)
 
 ### Git
 ```
 sudo apt install git-all
+```
+
+### kubectl Setup
+```
+az aks install-cli
 ```
 
 ### Helm
