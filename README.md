@@ -6,7 +6,8 @@ This page explains how to setup a Mate desktop on Azure Linux VM.
   * Desktop UI: Linux Mate
 
 > I prefer Linux MATE desktop environment compared to GNOME 3 for performance reason in particular with remote display(less animations and chrome).
-> Update (03/26 2021): you can provision an [Ubuntu Linux version 20.04](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/canonical.0001-com-ubuntu-server-focal?tab=Overview&modalAppId=canonical.0001-com-ubuntu-server-focal&signInModalType=1&ctaType=1). In that case, just go to step #6
+
+> Update (03/26 2021): you can provision an [Ubuntu Linux version 20.04](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/canonical.0001-com-ubuntu-server-focal?tab=Overview&modalAppId=canonical.0001-com-ubuntu-server-focal&signInModalType=1&ctaType=1). In that case, just go to Step #6 Intall Mate Desktop
 
 ## Step #0 - Provision a Linux Ubuntu VM on Azure 
 [Quickstart: Create a Linux virtual machine in the Azure portal](https://docs.microsoft.com/fr-fr/azure/virtual-machines/linux/quick-create-portal)
