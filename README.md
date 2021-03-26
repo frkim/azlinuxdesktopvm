@@ -85,3 +85,46 @@ sudo apt install ubuntu-mate-desktop
 sudo apt-get -q=2 -y install xrdp
 sudo service xrdp restart
 ```
+
+## Step#8 - Linux Software Components
+#Docker
+Docker Install Commands : 
+```
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common	
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+```
+
+ignore the error about public key could not be validated. 
+```
+sudo apt update
+sudo apt install docker-ce
+sudo systemctl status docker
+sudo usermod -aG docker ${USER}   #run docker as SUDO without typing sudo all the time, make sure to log out and login again to SSH 
+```
+
+#Azure CLI
+>Ubuntu 20.04 (Focal Fossa) and 20.10 (Groovy Gorilla) include an azure-cli package with version 2.0.81 provided by the universe repository. This package is outdated and not recommended. If this package is installed, remove the package before continuing by running the command sudo apt remove azure-cli -y && sudo apt autoremove -y.
+
+```
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+```
+
+#kubectl Setup
+```
+az aks install-cli
+```
+
+## Step #9 - Client Software
+
+[MobaXTerm](https://mobaxterm.mobatek.net/) is a powerfull remote access software
+
+## Step #10 - Misc
+On Linux VM configuration, add network port rule to open the RDP protocol with a minimal IP range (use your own public IP instead of 'Any')
+[Add RDP rule](https://docs.microsoft.com/en-us/troubleshoot/azure/virtual-machines/troubleshoot-rdp-nsg-problem)
+
+For a more convinient access add a Static IP to the VM
+[Add IP addresses](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface-addresses#add-ip-addresses)
+Then instead of using the IP address which could change at every desallocation you'll able to use a dns name like 'mylinuxworkstation.westeurope.cloudapp.azure.com'
+
