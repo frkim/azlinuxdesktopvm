@@ -88,7 +88,7 @@ sudo service xrdp restart
 ```
 
 ## Step#8 - Linux Software Components
-#Docker
+###Docker
 Docker Install Commands : 
 ```
 sudo apt update
@@ -105,17 +105,32 @@ sudo systemctl status docker
 sudo usermod -aG docker ${USER}   #run docker as SUDO without typing sudo all the time, make sure to log out and login again to SSH 
 ```
 
-#Azure CLI
+###Azure CLI
 >Ubuntu 20.04 (Focal Fossa) and 20.10 (Groovy Gorilla) include an azure-cli package with version 2.0.81 provided by the universe repository. This package is outdated and not recommended. If this package is installed, remove the package before continuing by running the command sudo apt remove azure-cli -y && sudo apt autoremove -y.
 
 ```
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
 
-#kubectl Setup
+###kubectl Setup
 ```
 az aks install-cli
 ```
+
+###Git
+```
+sudo apt install git-all
+```
+
+###Helm
+```
+curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
+sudo apt-get install apt-transport-https --yes
+echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+sudo apt-get update
+sudo apt-get install helm
+```
+
 
 ## Step #9 - Client Software
 
